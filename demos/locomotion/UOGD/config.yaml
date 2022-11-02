@@ -1,0 +1,31 @@
+BlackBox:
+  path: demos/locomotion/initial_model.bin
+  source_batch_size: 200000
+Data:
+  name: table
+  kwargs:
+    source_data:
+      path: demos/locomotion/data
+    online_data:
+      type: TestDataset
+      interval: 11
+      drop: true
+    seed: 0
+
+Online:
+  algorithm: OGD
+  kwargs:
+    D: 20
+    G: 20
+    T: 7000
+    nn_loss: true
+    projection: true
+    seed: 0
+    source_batch_size: 200000
+    thread: 4
+
+cpu_num: 8
+device: cpu
+random_seed: 0
+round: 7000
+log_interval: 10

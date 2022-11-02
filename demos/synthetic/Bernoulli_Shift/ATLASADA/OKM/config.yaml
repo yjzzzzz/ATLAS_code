@@ -1,0 +1,46 @@
+BlackBox:
+  path: demos/synthetic/initial_model.bin
+  source_batch_size: 10000
+Data:
+  kwargs:
+    online_data:
+      batch_size: 100
+    seed: 0
+    shift:
+      kwargs:
+        T: 10000
+        prob: 0.05
+        q1: 3
+        q2:
+        - 0.0
+        - 0.0
+        - 1.0
+      type: BernoulliShift
+    source_data:
+      path: demos/synthetic/offline_data.pt
+  name: toy
+Online:
+  algorithm: ATLASADA
+  kwargs:
+    D: 10
+    G: 1
+    T: 10000
+    meta_opt_lr: false
+    nn_loss: true
+    opt_epoch: 7
+    opt_lr: 1.0
+    optimism:
+      type: OKMHint
+      kwargs:
+        decay: false
+        k: 5
+    projection: true
+    seed: 0
+    source_batch_size: 10000
+    thread: 4
+    max_step_clip: 49
+cpu_num: 2
+device: cpu
+log_interval: 10
+random_seed: 0
+round: 10000
