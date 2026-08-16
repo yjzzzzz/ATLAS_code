@@ -1,3 +1,5 @@
+
+
 # Python implementation for "Adapting to Online Label Shift with Provable Guarantees"
 
 This is the python implementation for the experiments in the paper "**Adapting to Online Label Shift with Provable Guarantees**" [1]. We will first introduce the structure and requirements of the code, followed by a brief instruction for a quick start.
@@ -16,7 +18,7 @@ This is the python implementation for the experiments in the paper "**Adapting t
   * `table_data.py` is the code for the real-life SHL dataset for the locomotion detection task.
 
 * **utils**: Useful tools for running the code.
-  * `argparse.py` parses the configurations.
+  * `argparser.py` parses the configurations.
   * `multi_thread.py` is a tool multi-threaded acceleration.
   * `shift_simulate.py` is a tool to generate the simulated label shifts.
   * `tools.py` includes other useful tools, including a timer for testing the program runtime. 
@@ -39,7 +41,4 @@ We provide several demos in the folder *./demos*. To get a quick start, the read
 For example, one can use ``.\demos\locomotion\ATLAS\train.sh`` to run ATLAS algorithm over the SHL datasets [2], whose parameters are set as ``.\demos\locomotion\ATLAS\config.yaml``
 
 ## Reference:
-[1] Yong Bai\*, Yu-Jie Zhang\*, Peng Zhao, Masashi Sugiyama, and Zhi-Hua Zhou. Adapting to Online Label Shift with Provable Guarantees. In: Advances in Neural Information Processing Systems 35 (NeurIPS 2022), New Orleans, Louisiana, 2022. 
-
-
-
+[1] Yong Bai\*, Yu-Jie Zhang\*, Peng Zhao, Masashi Sugiyama, and Zhi-Hua Zhou. Adapting to Online Label Shift with Provable Guarantees. In: Advances in Neural Information Processing Systems 35 (NeurIPS 2022), New Orleans, Louisiana, 2022.
